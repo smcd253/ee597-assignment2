@@ -29,8 +29,10 @@ d(SNR = 20) = 1.41E4m\
 d(SNR = 25) = 7.94E3m\  
 d(SNR = 30) = 4.46E3m\  
 
-heta = 4:\
-d(SNR = 0)  = 375.84m\  
+heta = 4:
+
+d(SNR = 0)  = 375.84m
+  
 d(SNR = 5)  = 281.84m\  
 d(SNR = 10) = 211.35m\  
 d(SNR = 15) = 158.49m\  
@@ -46,7 +48,7 @@ p10 - *the probability that we move from the "receive" state to the "outage" sta
 p11 - * the probability that we remain in the "receive" state*
 
 mobile speed = 0:
-  
+
 p00 = 0.0780\  
 p01 = 0.1400\  
 p10 = 0.1395\  
