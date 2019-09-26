@@ -45,7 +45,8 @@ p01 - *the probability that we move from the "outage" state to the "receive" sta
 p10 - *the probability that we move from the "receive" state to the "outage" state*
 p11 - * the probability that we remain in the "receive" state*
 
-mobile speed = 0:\  
+mobile speed = 0:
+  
 p00 = 0.0780\  
 p01 = 0.1400\  
 p10 = 0.1395\  
