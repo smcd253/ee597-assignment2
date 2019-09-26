@@ -51,7 +51,7 @@ p01 = 0.1400<br>
 p10 = 0.1395<br>
 p11 = 0.6420<br>
 
-mobile speed = 5:<br>  
+mobile speed = 5:<br>
 p00 = 0.0775<br>
 p01 = 0.1490<br>
 p10 = 0.1490<br>
