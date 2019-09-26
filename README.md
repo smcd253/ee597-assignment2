@@ -16,30 +16,12 @@ We can see that the probability of outage sigmoid function gets skewed left as w
 We can see that the probability of outage sigmoid function gets shallower as the standard deviation of the path loss exponenent (PLE) increases. This makes sense, as the probability of outage is inversely proportional to the log of the PLE's standard deviation.
 
 ## Rate Adaptation
-![*Figure 3: Effective Goodput (Mbps) as a function of SNR*]# ee597-assignment2
-Determining outage probability as a function of distance for log-normal shadowing, rate adaption for varying ranges of SNR, and modeling Rayleigh Fading as a two-state markov chain.
-
-by<br>
-Bill Wang               student id:
-and
-Spencer McDonough       student id:
-
-## Outage Probability as a function of distance for Log-Normal Shadowing 
-![*Figure 1: Probability of Outage for Various Path Loss Exponent Values*](p1_pathLossExp.png)
-
-We can see that the probability of outage sigmoid function gets skewed left as we increase the value of the path loss exponent (PLE). This means that the probability of outage increases exponentially by a greater factor when the PLE is increased. This makes sense, as the PLE represents the attenuation due to the nature of the environment (heta > 2 : loss, heta = 2 : vacuum, or no loss, heta < 2 : gain).
-
-![*Figure 2: Probability of Outage for Various Standard Deviations (as applied to the Path Loss Exponent)*](p1_sd.png)
-
-We can see that the probability of outage sigmoid function gets shallower as the standard deviation of the path loss exponenent (PLE) increases. This makes sense, as the probability of outage is inversely proportional to the log of the PLE's standard deviation.
-
-## Rate Adaptation
 ![*Figure 3: Effective Goodput (Mbps) as a function of SNR*](eff_goodput_vs_snr.png)
 
 ![*Figure 4: Effective Goodput (Mbps) as a function of Distance (m)*](eff_goodput_vs_d.png)
 
 In this exercise, we converted SNR to distance with a known path loss model. P<sub>T</sub>dBm = 23dBm, P<sub>ref</sub> = -10dBm, NdBm = -90dBm. We took figure 3 and converted the model from Goodput vs SNR to Goodput vs Distance (m) with heta values 2 and 4.
-Here is a breakdown of the SNR --> d(m) conversions for clarity:
+Here is a breakdown of the SNR --> d(m) conversions for clarity:<br>
 d = d0 * 10<sup>(PTdbm + Pref - NdBm - SNRdBm)/(heta * 10)</sup>
 
 heta = 2:<br>
