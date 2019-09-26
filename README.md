@@ -40,10 +40,10 @@ d(SNR = 30) = 66.83m<br>
 
 ## Rayleigh Fading
 In this exercise, we generated Markov Chain models to represent the likelihood that a receiver is in the state of "receive" or "outage." The Markov Chain models and their probabilities are associated with received power (in dBm) being above or below a threshold, dictating whether the received signal is strong enough to demodulate or not. We generated 6 models corresponding to mobile speeds [0, 5, 10, 15, 20, 25]. 
-p00 - *the probability that we remain in the "outage" state*
-p01 - *the probability that we move from the "outage" state to the "receive" state*
-p10 - *the probability that we move from the "receive" state to the "outage" state*
-p11 - * the probability that we remain in the "receive" state*
+p00 - *the probability that we remain in the "outage" state*<br>
+p01 - *the probability that we move from the "outage" state to the "receive" state*<br>
+p10 - *the probability that we move from the "receive" state to the "outage" state*<br>
+p11 - *the probability that we remain in the "receive" state*<br>
 
 mobile speed = 0:<br>
 p00 = 0.0780<br>
