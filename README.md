@@ -1,5 +1,5 @@
 # ee597-assignment2
-determining outage probability as a function of distance for log-normal shadowing, rate adaption for varying ranges of SNR, and modeling Rayleigh Fading as a two-state markov chain.
+Determining outage probability as a function of distance for log-normal shadowing, rate adaption for varying ranges of SNR, and modeling Rayleigh Fading as a two-state markov chain.
 
 
 ## Outage Probability as a function of distance for Log-Normal Shadowing 
@@ -40,7 +40,7 @@ d(SNR = 30) = 66.83m<br>
 
 ## Rayleigh Fading
 In this exercise, we generated Markov Chain models to represent the likelihood that a receiver is in the state of "receive" or "outage." The Markov Chain models and their probabilities are associated with received power (in dBm) being above or below a threshold, dictating whether the received signal is strong enough to demodulate or not. We generated 6 models corresponding to mobile speeds [0, 5, 10, 15, 20, 25].
- 
+
 p00 - *the probability that we remain in the "outage" state*<br>
 p01 - *the probability that we move from the "outage" state to the "receive" state*<br>
 p10 - *the probability that we move from the "receive" state to the "outage" state*<br>
