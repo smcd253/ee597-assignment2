@@ -22,29 +22,29 @@ wc = 2*pi*Fc; %radian frequency
 
 	[rayi rayq] = demod(ray,Fc,Fs,'qam'); %demodulated signal 
 	env_ray = sqrt(rayi.^2+rayq.^2); %envelope of received signal 
-    subplot(2,2,1)
-plot(t*1e9,ray)%plots the rf signal
-title('rf signal')
-xlabel('time ns')
-ylabel('volt')
-xlim([0 20])
-subplot(2,2,2)
-plot(t*1e9,rayi)%plots the inphase component
-xlabel('time ns')
-ylabel('volt')
-xlim([0 20])
-title('inphase component')
-subplot(2,2,3)
-plot(t*1e9,rayq)%plots the quadrature component
-title('quadrature component')
-xlabel('time ns')
-ylabel('volt')
-xlim([0 20])
-subplot(2,2,4)
-plot(t*1e9,env_ray)%plots the envelope
-title('envelope')
-xlabel('time ns')
-ylabel('volt')
+%     subplot(2,2,1)
+% plot(t*1e9,ray)%plots the rf signal
+% title('rf signal')
+% xlabel('time ns')
+% ylabel('volt')
+% xlim([0 20])
+% subplot(2,2,2)
+% plot(t*1e9,rayi)%plots the inphase component
+% xlabel('time ns')
+% ylabel('volt')
+% xlim([0 20])
+% title('inphase component')
+% subplot(2,2,3)
+% plot(t*1e9,rayq)%plots the quadrature component
+% title('quadrature component')
+% xlabel('time ns')
+% ylabel('volt')
+% xlim([0 20])
+% subplot(2,2,4)
+% plot(t*1e9,env_ray)%plots the envelope
+% title('envelope')
+% xlabel('time ns')
+% ylabel('volt')
 xlim([0 20])
 
 y = sort(env_ray); %unity mean
@@ -66,46 +66,46 @@ fray=x2;
 x3=fynaka;
 x3=x3./max(x3);
 fynaka=x3;
-figure
-plot(0:1/h:1-1/h,x1,':')
-hold on
-plot(y,fray)
-hold on
-plot(y,fynaka,'--')
-xlabel('Envelope r');
-ylabel('Probability density function f(r)');
+% figure
+% plot(0:1/h:1-1/h,x1,':')
+% hold on
+% plot(y,fray)
+% hold on
+% plot(y,fynaka,'--')
+% xlabel('Envelope r');
+% ylabel('Probability density function f(r)');
 
-%computation of the outage probabilities
+%computation of the outage probabilities281.84m
 power_ray=env_ray.^2;
 powerdB=10*log10(power_ray);
-mean_power=10*log10(mean(env_ray.^2))
-MK=length(env_ray)
-for k=1:20;
+mean_power=10*log10(mean(env_ray.^2));
+MK=length(env_ray);
+for k=1:20 %He mentioned we just take the picture/graph of 'Goodput' vs Eb/No and alter the x axis based on the parameters provided.  Not sure exactly the purpose of this exercise
     pow(k)=mean_power-2*k; %threshold power
     kps=pow(k);
     ratio=10^(kps/10)/10^(mean_power/10);
     poutth(k)=1-exp(-ratio);%theoretical outage
     count=0;
-    for ku=1:MK;
+    for ku=1:MK
         power=powerdB(ku);%power in dB
         if power <= kps
             count=count+1;
         else
-        end;
-    end;
+        end
+    end
         poutsim(k)=count/MK;%outage probability simulated
         
-end;
-figure
-plot(pow,poutth,':',pow,poutsim,'--');
-xlabel('thrshold power dBm')
-ylabel('outage probability')
-legend('poutth','poutsim')
+end
+% figure
+% plot(pow,poutth,':',pow,poutsim,'--');
+% xlabel('thrshold power dBm')
+% ylabel('outage probability')
+% legend('poutth','poutsim')
 
 
 
 
-thresh=power_ray>pow(3);
+thresh=powerdB>(pow(3));
 
 %Markov
 count10=0;
@@ -113,7 +113,7 @@ count11=0;
 count00=0;
 count01=0;
 for i=1:length(thresh)-1
-    if thresh(1,i) ==1
+    if thresh(1,i)==1
         if thresh(1,i+1)==1
             count11=count11+1;
         else
