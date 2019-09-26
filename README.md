@@ -13,7 +13,8 @@ We can see that the probability of outage sigmoid function gets shallower as the
 
 ## Rate Adaptation
 ![*Figure 3: Effective Goodput (Mbps) as a function of SNR*](eff_goodput_vs_snr.png)
-![*Figure 4: Effective Goodput (Mbps) as a function of Distance (m)*](eff_goodput_vs_d.png){:height="50%" width="50%"}
+
+![*Figure 4: Effective Goodput (Mbps) as a function of Distance (m)*](eff_goodput_vs_d.png)
 
 In this exercise, we converted SNR to distance with a known path loss model. P<sub>T</sub>dBm = 23dBm, P<sub>ref</sub> = -10dBm, NdBm = -90dBm. We took figure 3 and converted the model from Goodput vs SNR to Goodput vs Distance (m) with heta values 2 and 4.
 Here is a breakdown of the SNR --> d(m) conversions for clarity:
