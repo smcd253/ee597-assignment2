@@ -20,23 +20,23 @@ In this exercise, we converted SNR to distance with a known path loss model. P<s
 Here is a breakdown of the SNR --> d(m) conversions for clarity:
 d = d0 * 10<sup>(PTdbm + Pref - NdBm - SNRdBm)/(heta * 10)</sup>
 
-heta = 2:\  
-d(SNR = 0)  = 1.41E5m\  
-d(SNR = 5)  = 7.94E4m\  
-d(SNR = 10) = 4.46E4m\  
-d(SNR = 15) = 2.51E4m\  
-d(SNR = 20) = 1.41E4m\  
-d(SNR = 25) = 7.94E3m\  
-d(SNR = 30) = 4.46E3m\  
+heta = 2:<br>
+d(SNR = 0)  = 1.41E5m<br>
+d(SNR = 5)  = 7.94E4m<br>
+d(SNR = 10) = 4.46E4m<br>
+d(SNR = 15) = 2.51E4m<br>
+d(SNR = 20) = 1.41E4m<br>
+d(SNR = 25) = 7.94E3m<br>
+d(SNR = 30) = 4.46E3m<br>
 
-heta = 4:\
-d(SNR = 0)  = 375.84m\
-d(SNR = 5)  = 281.84m\  
-d(SNR = 10) = 211.35m\  
-d(SNR = 15) = 158.49m\  
-d(SNR = 20) = 118.85m\  
-d(SNR = 25) = 89.13m\  
-d(SNR = 30) = 66.83m\  
+heta = 4:<br>
+d(SNR = 0)  = 375.84m<br>
+d(SNR = 5)  = 281.84m<br>
+d(SNR = 10) = 211.35m<br>
+d(SNR = 15) = 158.49m<br>
+d(SNR = 20) = 118.85m<br>
+d(SNR = 25) = 89.13m<br>
+d(SNR = 30) = 66.83m<br>
 
 ## Rayleigh Fading
 In this exercise, we generated Markov Chain models to represent the likelihood that a receiver is in the state of "receive" or "outage." The Markov Chain models and their probabilities are associated with received power (in dBm) being above or below a threshold, dictating whether the received signal is strong enough to demodulate or not. We generated 6 models corresponding to mobile speeds [0, 5, 10, 15, 20, 25]. 
@@ -46,37 +46,37 @@ p10 - *the probability that we move from the "receive" state to the "outage" sta
 p11 - * the probability that we remain in the "receive" state*
 
 mobile speed = 0:<br>
-p00 = 0.0780<br>  
-p01 = 0.1400<br>  
-p10 = 0.1395<br>  
-p11 = 0.6420<br>  
+p00 = 0.0780<br>
+p01 = 0.1400<br>
+p10 = 0.1395<br>
+p11 = 0.6420<br>
 
-mobile speed = 5:\  
-p00 = 0.0775\  
-p01 = 0.1490\  
-p10 = 0.1490\  
-p11 = 0.6240\  
+mobile speed = 5:<br>  
+p00 = 0.0775<br>
+p01 = 0.1490<br>
+p10 = 0.1490<br>
+p11 = 0.6240<br>
 
-mobile speed = 10:\  
-p00 = 0.0715\  
-p01 = 0.1430\  
-p10 = 0.1425\  
-p11 = 0.6425\  
+mobile speed = 10:<br>
+p00 = 0.0715<br>
+p01 = 0.1430<br>
+p10 = 0.1425<br>
+p11 = 0.6425<br>
 
-mobile speed = 15:\  
-p00 = 0.0655\  
-p01 = 0.1570\  
-p10 = 0.1575\  
-p11 = 0.6195\  
+mobile speed = 15:<br>
+p00 = 0.0655<br>
+p01 = 0.1570<br>
+p10 = 0.1575<br>
+p11 = 0.6195<br>
 
-mobile speed = 20:\  
-p00 = 0.0750\  
-p01 = 0.1420\  
-p10 = 0.1420\  
-p11 = 0.6405\  
+mobile speed = 20:<br>
+p00 = 0.0750<br>
+p01 = 0.1420<br>
+p10 = 0.1420<br>
+p11 = 0.6405<br>
 
-mobile speed = 25:\  
-p00 = 0.0810\  
-p01 = 0.1485\  
-p10 = 0.1485\  
-p11 = 0.6215\  
+mobile speed = 25:<br>
+p00 = 0.0810<br>
+p01 = 0.1485<br>
+p10 = 0.1485<br>
+p11 = 0.6215<br>
